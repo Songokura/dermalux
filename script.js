@@ -22,6 +22,8 @@
       menu: "Здравствуйте! Пишу с сайта Dermalux. Хочу записаться на приём. Что беспокоит: ",
       sticky: "Здравствуйте! Пишу с сайта Dermalux. Хочу записаться на приём. Что беспокоит: ",
       kontakty: "Здравствуйте! Пишу с сайта Dermalux. Хочу записаться на приём. Что беспокоит: ",
+      rflifting: "Здравствуйте! Интересует безоперационная подтяжка лица, RF-лифтинг. Подскажите стоимость и свободное время.",
+      pochemu: "Здравствуйте! Пишу с сайта Dermalux. Хочу записаться на консультацию. Что беспокоит: ",
       papillomy: "Здравствуйте! Интересует удаление папиллом или бородавок. Подскажите стоимость и свободное время.",
       rodinki: "Здравствуйте! Интересует осмотр родинки с дерматоскопией и удаление по показаниям. Подскажите стоимость и свободное время.",
       pigmentaciya: "Здравствуйте! Интересует лечение пигментации или веснушек. Подскажите стоимость и свободное время.",
@@ -339,6 +341,30 @@
       W.open(url, "_blank", "noopener");
       if (thanks) { thanks.hidden = false; try { thanks.focus({ preventScroll: true }); } catch (err) {} }
       form.reset();
+    });
+  }
+
+  /* ---------- Ролик награды: немая петля в кадре, полный ролик со звуком по кнопке ---------- */
+  var awVid = doc.getElementById("awVid");
+  if (awVid) {
+    var awV = awVid.querySelector("video"), awBtn = awVid.querySelector(".aw-play");
+    awV.addEventListener("playing", function () { awVid.classList.add("is-live"); });
+    if (!REDUCED && "IntersectionObserver" in W) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (x) {
+          if (awVid.classList.contains("is-full")) return;
+          if (x.isIntersecting) {
+            if (!awV.getAttribute("src")) awV.src = awV.getAttribute("data-loop");
+            var pr = awV.play(); if (pr && pr.catch) pr.catch(function () {});
+          } else { awV.pause(); }
+        });
+      }, { threshold: 0.55 }).observe(awVid);
+    }
+    awBtn.addEventListener("click", function () {
+      awVid.classList.add("is-full", "is-live");
+      awV.loop = false; awV.muted = false; awV.controls = true;
+      awV.src = awV.getAttribute("data-full");
+      var pr = awV.play(); if (pr && pr.catch) pr.catch(function () {});
     });
   }
 
