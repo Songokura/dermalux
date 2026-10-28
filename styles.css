@@ -316,10 +316,6 @@ body.menu-open{overflow:hidden}
 .pw-kl .ph:not(.has-img),.pw-kl:has(.ph:not(.has-img)) .kl-ov{display:none}
 .pw-kl:has(.ph:not(.has-img)){height:auto}
 .pw-kl:has(.ph:not(.has-img)) .plate{position:relative;height:auto;background:radial-gradient(40% 60% at 80% 50%,rgba(47,183,173,.16),transparent 70%),var(--green)}
-.pw-kl:has(.ph:not(.has-img)) .plate::before{content:"";position:absolute;right:-6vw;top:50%;width:min(56vw,680px);aspect-ratio:1;transform:translateY(-50%);border-radius:50%;pointer-events:none;
-  background:repeating-conic-gradient(rgba(232,211,148,.55) 0 .35deg,transparent .35deg 6deg);
-  -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 16px),#000 calc(100% - 15px));mask:radial-gradient(farthest-side,transparent calc(100% - 16px),#000 calc(100% - 15px));
-  box-shadow:inset 0 0 0 1px rgba(232,211,148,.3)}
 .pw-kl:has(.ph:not(.has-img)) .kl-txt{position:relative;padding:clamp(88px,11vw,150px) 0}
 .pw-kl .ph{position:absolute;inset:0;height:100%;background:var(--green-2)}
 .pw-kl .ph:not(.has-img) .ph-veil::after{background:var(--green)}
@@ -467,7 +463,6 @@ html[lang="kk"] .txt h2{font-size:clamp(30px,3.6vw,54px)}
 .kl-txt{color:var(--tb-ink)}
 .kl-txt .addr{color:rgba(14,36,34,.78)}
 .kl-ov{background:linear-gradient(0deg,rgba(129,216,208,.95) 0,rgba(129,216,208,.6) 40%,rgba(129,216,208,0) 70%)}
-.pw-kl:has(.ph:not(.has-img)) .plate::before{background:repeating-conic-gradient(rgba(14,36,34,.32) 0 .35deg,transparent .35deg 6deg);box-shadow:inset 0 0 0 1px rgba(14,36,34,.18)}
 .plate::after{background:var(--tb-ink)}
 .foot{color:rgba(14,36,34,.76)}
 .foot .brand-w,.foot .ig{color:var(--tb-ink)}
@@ -503,3 +498,10 @@ html[lang="kk"] .hero h1{font-size:clamp(34px,3.9vw,58px)}
 html[lang="kk"] .txt h2{font-size:clamp(28px,2.6vw,38px)}
 @media (max-width:760px){h2.disp,.kl-txt h2,.txt h2{font-size:clamp(28px,8vw,36px)}html[lang="kk"] .txt h2{font-size:clamp(26px,7.4vw,32px)}.cell .v{font-size:84px}}
 @media (max-width:760px){.doc .ph,.aw-vid{width:min(100%,290px);margin-inline:auto}}
+
+/* ---------- ворота вкуса 28.10.2026: контраст на тиффани, без штриховки, шапка над меню ---------- */
+.pw.dark,.sec.dark{--fg2:rgba(14,36,34,.9)}
+.dark .lead,.pw.dark .lead,.cell .k,.kl-txt .addr,.spec .dabs li{color:rgba(14,36,34,.9)}
+.foot{color:rgba(14,36,34,.88)}
+.foot .disc{color:rgba(14,36,34,.8)}
+body.menu-open .hdr{z-index:70}
