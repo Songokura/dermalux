@@ -347,7 +347,7 @@
   if (awVid) {
     var awV = awVid.querySelector("video"), awBtn = awVid.querySelector(".aw-play");
     awV.addEventListener("playing", function () { awVid.classList.add("is-live"); });
-    if (!REDUCED && "IntersectionObserver" in W) {
+    if (!REDUCED && "IntersectionObserver" in W && awV.getAttribute("data-loop")) {
       new IntersectionObserver(function (es) {
         es.forEach(function (x) {
           if (awVid.classList.contains("is-full")) return;

@@ -478,3 +478,28 @@ html[lang="kk"] .txt h2{font-size:clamp(30px,3.6vw,54px)}
 .doc .ph,.aw-vid{aspect-ratio:9/16}
 @media (max-width:760px){.doc .ph{aspect-ratio:9/16;max-height:none;width:min(100%,420px);margin-inline:auto}}
 @media (min-width:761px){.doc .ph{max-width:420px;justify-self:end;width:100%}}
+
+/* ---------- сдержанный масштаб (28.10.2026): услуга - обычная секция по содержимому, а не экран на каждую ---------- */
+:root{--tb-soft:#D6F2EE}
+.pw.dark:not(.pw-kl){--bg:var(--tb-soft)}
+@media (min-width:761px){
+  .pw-hero{height:100svh}
+  .pw:not(.pw-hero):not(.pw-kl){height:auto}
+  .pw:not(.pw-hero):not(.pw-kl) .plate{position:relative;height:auto;transform:none;border-radius:0}
+  .pw:not(.pw-hero):not(.pw-kl) .plate::after{display:none}
+  .svc{width:min(100% - 40px,1120px);margin-inline:auto;gap:clamp(48px,7vw,112px);align-items:center;padding:clamp(88px,9vw,128px) 0;height:auto}
+  .svc .ph{height:auto;aspect-ratio:4/5;width:100%;max-width:440px;justify-self:center;border-radius:2px}
+  .txt,.pw:not(.r) .txt,.pw.r .txt{padding:0}
+  .txt h2{font-size:clamp(30px,2.9vw,42px)}
+  .txt .lead{font-size:16px}
+  .doc .ph{max-width:340px}
+  .pw-kl:has(.ph:not(.has-img)) .kl-txt{padding:clamp(72px,8vw,112px) 0}
+  .pw-kl:has(.ph:not(.has-img)) .plate::before{width:min(40vw,480px)}
+}
+h2.disp,.kl-txt h2{font-size:clamp(30px,3.2vw,46px)}
+.hero h1{font-size:clamp(38px,3.8vw,58px)}
+.cell .v{font-size:clamp(72px,7vw,112px)}
+html[lang="kk"] .hero h1{font-size:clamp(34px,3.9vw,58px)}
+html[lang="kk"] .txt h2{font-size:clamp(28px,2.6vw,38px)}
+@media (max-width:760px){h2.disp,.kl-txt h2,.txt h2{font-size:clamp(28px,8vw,36px)}html[lang="kk"] .txt h2{font-size:clamp(26px,7.4vw,32px)}.cell .v{font-size:84px}}
+@media (max-width:760px){.doc .ph,.aw-vid{width:min(100%,290px);margin-inline:auto}}
