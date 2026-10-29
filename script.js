@@ -342,19 +342,20 @@
     });
   }
 
-  /* ---------- Врач: немая петля из клиники, пока блок в кадре ---------- */
-  var vrVid = doc.getElementById("vrVid");
-  if (vrVid && !REDUCED && "IntersectionObserver" in W) {
-    var vrV = vrVid.querySelector("video");
-    vrV.addEventListener("playing", function () { vrVid.classList.add("is-live"); });
-    new IntersectionObserver(function (es) {
-      es.forEach(function (x) {
-        if (x.isIntersecting) {
-          if (!vrV.getAttribute("src")) vrV.src = vrV.getAttribute("data-loop");
-          var pr = vrV.play(); if (pr && pr.catch) pr.catch(function () {});
-        } else vrV.pause();
-      });
-    }, { threshold: 0.4 }).observe(vrVid);
+  /* ---------- Немые петли (герой): играют, пока кадр на экране ---------- */
+  if (!REDUCED && "IntersectionObserver" in W) {
+    [].forEach.call(doc.querySelectorAll("[data-loopbox]"), function (box) {
+      var v = box.querySelector("video");
+      v.addEventListener("playing", function () { box.classList.add("is-live"); });
+      new IntersectionObserver(function (es) {
+        es.forEach(function (x) {
+          if (x.isIntersecting) {
+            if (!v.getAttribute("src")) v.src = v.getAttribute("data-loop");
+            var pr = v.play(); if (pr && pr.catch) pr.catch(function () {});
+          } else v.pause();
+        });
+      }, { threshold: 0.3 }).observe(box);
+    });
   }
 
   /* ---------- Ролик награды: немая петля в кадре, полный ролик со звуком по кнопке ---------- */
