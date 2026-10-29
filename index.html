@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300&family=Onest:wght@400;500;600&display=swap">
 <link rel="preload" as="image" href="assets/img/hero-2.webp" media="(min-width:761px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-m-2.webp" media="(max-width:760px)" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261029-7">
+<link rel="stylesheet" href="styles.css?v=20261029-8">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -116,6 +116,7 @@
     <li><a href="#morshchiny" data-i="m.morshchiny">Армирование лица</a></li>
     <li><a href="#akne" data-i="m.akne">Лечение акне</a></li>
     <li><a href="#uslugi" data-i="m.uslugi">Все услуги и цены</a></li>
+    <li><a href="#raboty" data-i="m.raboty">Мои работы</a></li>
     <li><a href="#vrach" data-i="m.vrach">Врач</a></li>
     <li><a href="#voprosy" data-i="m.voprosy">Вопросы</a></li>
     <li><a href="#kontakty" data-i="m.kontakty">Контакты</a></li>
@@ -279,6 +280,69 @@
     <p class="price-note" data-i="akn.note">Сроки и результат зависят от стадии и причины акне, поэтому врач не обещает «гарантию», а показывает план.</p>
       </div>
     </article>
+  </div>
+</section>
+
+<!-- Мои работы: лента роликов -->
+<section class="sec" id="raboty" aria-labelledby="h-rb">
+  <div class="wrap">
+    <div class="rb-head rv">
+      <div>
+        <h2 class="disp" id="h-rb" data-i="rb.h2">Мои работы</h2>
+        <p class="lead" data-i="rb.lead">Ролики из практики: до и после, процедуры и результат. Нажмите, чтобы посмотреть со звуком.</p>
+      </div>
+      <div class="rb-nav">
+        <button class="rb-btn" type="button" data-dir="-1" aria-label="Предыдущий ролик" data-i-aria="rb.prev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="rb-btn" type="button" data-dir="1" aria-label="Следующий ролик" data-i-aria="rb.next"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+    <div class="rb-track" id="rbTrack" tabindex="0" aria-label="Ролики работ врача" data-i-aria="rb.aria">
+      <figure class="rb">
+        <div class="rb-vid" data-src="assets/video/raboty/fibromy.mp4">
+          <img src="assets/img/raboty/fibromy.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
+          <button class="rb-play" type="button" aria-describedby="rb-fibromy"><span class="aw-ic" aria-hidden="true"></span><span data-i="rb.play">Смотреть</span></button>
+        </div>
+        <figcaption id="rb-fibromy" data-i="rb.c1">Фибромы и папилломы: до и через 3 месяца</figcaption>
+      </figure>
+      <figure class="rb">
+        <div class="rb-vid" data-src="assets/video/raboty/akne.mp4">
+          <img src="assets/img/raboty/akne.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
+          <button class="rb-play" type="button" aria-describedby="rb-akne"><span class="aw-ic" aria-hidden="true"></span><span data-i="rb.play">Смотреть</span></button>
+        </div>
+        <figcaption id="rb-akne" data-i="rb.c2">Акне: до и после курса</figcaption>
+      </figure>
+      <figure class="rb">
+        <div class="rb-vid" data-src="assets/video/raboty/papillomatoz.mp4">
+          <img src="assets/img/raboty/papillomatoz.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
+          <button class="rb-play" type="button" aria-describedby="rb-papillomatoz"><span class="aw-ic" aria-hidden="true"></span><span data-i="rb.play">Смотреть</span></button>
+        </div>
+        <figcaption id="rb-papillomatoz" data-i="rb.c3">Множественный папилломатоз: лазерное удаление за 1 процедуру</figcaption>
+      </figure>
+      <figure class="rb">
+        <div class="rb-vid" data-src="assets/video/raboty/armirovanie.mp4">
+          <img src="assets/img/raboty/armirovanie.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
+          <button class="rb-play" type="button" aria-describedby="rb-armirovanie"><span class="aw-ic" aria-hidden="true"></span><span data-i="rb.play">Смотреть</span></button>
+        </div>
+        <figcaption id="rb-armirovanie" data-i="rb.c4">Армирование лица</figcaption>
+      </figure>
+      <figure class="rb">
+        <div class="rb-vid" data-src="assets/video/raboty/novoobrazovanie.mp4">
+          <img src="assets/img/raboty/novoobrazovanie.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
+          <button class="rb-play" type="button" aria-describedby="rb-novoobrazovanie"><span class="aw-ic" aria-hidden="true"></span><span data-i="rb.play">Смотреть</span></button>
+        </div>
+        <figcaption id="rb-novoobrazovanie" data-i="rb.c5">Удаление новообразования: заживление</figcaption>
+      </figure>
+      <figure class="rb">
+        <div class="rb-vid" data-src="assets/video/raboty/uhod.mp4">
+          <img src="assets/img/raboty/uhod.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
+          <button class="rb-play" type="button" aria-describedby="rb-uhod"><span class="aw-ic" aria-hidden="true"></span><span data-i="rb.play">Смотреть</span></button>
+        </div>
+        <figcaption id="rb-uhod" data-i="rb.c6">Уходовые процедуры для лица</figcaption>
+      </figure>
+    </div>
+    <div class="rb-more">
+      <a class="btn btn-ghost" href="https://www.instagram.com/dr_gulmira_cosmetolog_/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-ig"/></svg><span data-i="rb.ig">Больше работ в Instagram</span></a>
+    </div>
   </div>
 </section>
 
@@ -564,6 +628,6 @@
   <a href="https://www.instagram.com/dr_gulmira_cosmetolog_/" target="_blank" rel="noopener" aria-label="Instagram" style="border-left:1px solid rgba(255,255,255,.14)"><svg aria-hidden="true"><use href="#ic-ig"/></svg></a>
 </nav>
 
-<script src="script.js?v=20261029-7" defer></script>
+<script src="script.js?v=20261029-8" defer></script>
 </body>
 </html>

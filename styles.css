@@ -555,3 +555,24 @@ body.menu-open .hdr{z-index:70}
 .cell .v{font-size:clamp(34px,3vw,44px)}
 .plate::after{display:none}
 .cell.big{justify-content:center}
+/* ---------- Мои работы ---------- */
+.rb-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px}
+.rb-head .lead{margin-top:12px}
+.rb-nav{display:flex;gap:10px;flex:0 0 auto}
+.rb-btn{width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--paper);color:var(--ink);display:grid;place-items:center;cursor:pointer;transition:background .2s,opacity .2s}
+.rb-btn[hidden]{display:none}
+.rb-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.rb-btn:disabled{opacity:.35;cursor:default}
+.rb-btn:active:not(:disabled){transform:scale(.96)}
+@media (hover:hover) and (pointer:fine){.rb-btn:hover:not(:disabled){background:var(--mist)}}
+.rb-track{display:grid;grid-auto-flow:column;grid-auto-columns:clamp(220px,22vw,260px);gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:32px;padding-bottom:8px;scrollbar-width:thin;overscroll-behavior-x:contain}
+.rb{margin:0;scroll-snap-align:start;min-width:0}
+.rb-vid{position:relative;aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;background:var(--ink)}
+.rb-vid>img,.rb-vid>video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.rb-vid>video{object-fit:contain;background:#000}
+.rb-play{position:absolute;left:12px;bottom:12px;display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 16px 0 7px;border:0;border-radius:999px;background:var(--paper);color:var(--ink);font:500 14px/1 var(--fb,inherit);cursor:pointer}
+.rb-play:active{transform:scale(.97)}
+.rb-vid.is-on .rb-play,.rb-vid.is-on>img{display:none}
+.rb figcaption{margin-top:12px;font-size:14px;line-height:1.4;color:var(--mute)}
+.rb-more{margin-top:28px}
+@media (max-width:760px){.rb-head{flex-direction:column;align-items:flex-start}.rb-nav{display:none}.rb-track{grid-auto-columns:68%;gap:14px;margin-inline:-16px;padding-inline:16px;scroll-padding-inline:16px}.rb-more .btn{width:100%}}

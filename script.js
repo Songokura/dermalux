@@ -363,6 +363,41 @@
     }
   }
 
+  /* ---------- Мои работы: лента со стрелками, ролик по нажатию ---------- */
+  var rbTrack = doc.getElementById("rbTrack");
+  if (rbTrack) {
+    var rbBtns = [].slice.call(doc.querySelectorAll("#raboty .rb-btn"));
+    var rbStep = function () { var c = rbTrack.querySelector(".rb"); return c ? c.getBoundingClientRect().width + 20 : 280; };
+    var rbSync = function () {
+      var max = rbTrack.scrollWidth - rbTrack.clientWidth;
+      rbBtns.forEach(function (b) {
+        b.hidden = max <= 2;
+        b.disabled = b.getAttribute("data-dir") === "-1" ? rbTrack.scrollLeft <= 2 : rbTrack.scrollLeft >= max - 2;
+      });
+    };
+    rbBtns.forEach(function (b) {
+      b.addEventListener("click", function () { rbTrack.scrollBy({ left: rbStep() * +b.getAttribute("data-dir"), behavior: REDUCED ? "auto" : "smooth" }); });
+    });
+    rbTrack.addEventListener("scroll", rbSync, { passive: true });
+    W.addEventListener("resize", rbSync);
+    rbSync();
+    [].forEach.call(rbTrack.querySelectorAll(".rb-vid"), function (box) {
+      box.querySelector(".rb-play").addEventListener("click", function () {
+        [].forEach.call(rbTrack.querySelectorAll("video"), function (v) { v.pause(); });
+        var v = box.querySelector("video");
+        if (!v) {
+          v = doc.createElement("video");
+          v.controls = true; v.playsInline = true; v.preload = "auto";
+          v.src = box.getAttribute("data-src");
+          box.appendChild(v);
+        }
+        box.classList.add("is-on");
+        var pr = v.play(); if (pr && pr.catch) pr.catch(function () {});
+        v.focus({ preventScroll: true });
+      });
+    });
+  }
+
   /* ---------- Немые петли (герой): играют, пока кадр на экране ---------- */
   if (!REDUCED && "IntersectionObserver" in W) {
     [].forEach.call(doc.querySelectorAll("[data-loopbox]"), function (box) {
