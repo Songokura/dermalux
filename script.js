@@ -172,7 +172,7 @@
       var plate = pw.firstElementChild;
       if (plate) plate.classList.toggle("gone", exit >= 1 && !MOBILE);
       if (!s.txts) s.txts = pw.querySelectorAll(".txt, .hero-txt");
-      var on = isHero ? INTRO > 0.15 : (MOBILE ? enter > 0.3 : enter > 0.6);
+      var on = isHero ? INTRO > 0.15 : enter > 0.12;
       if (s.on !== on) { s.on = on; for (var t = 0; t < s.txts.length; t++) s.txts[t].classList.toggle("on", on); }
     }
     if (sticky) {
@@ -340,6 +340,14 @@
       if (thanks) { thanks.hidden = false; try { thanks.focus({ preventScroll: true }); } catch (err) {} }
       form.reset();
     });
+  }
+
+  /* ---------- Схема RF: поле течёт, волокна подтягиваются, пока кадр на экране ---------- */
+  var rfLive = doc.getElementById("rfLive");
+  if (rfLive && "IntersectionObserver" in W) {
+    new IntersectionObserver(function (es) {
+      es.forEach(function (x) { rfLive.classList.toggle("rf-on", x.isIntersecting); });
+    }, { threshold: 0.45 }).observe(rfLive);
   }
 
   /* ---------- Немые петли (герой): играют, пока кадр на экране ---------- */

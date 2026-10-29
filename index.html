@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300&family=Onest:wght@400;500;600&display=swap">
 <link rel="preload" as="image" href="assets/img/hero-2.webp" media="(min-width:761px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-m-2.webp" media="(max-width:760px)" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261029-4">
+<link rel="stylesheet" href="styles.css?v=20261029-5">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -176,9 +176,68 @@
         </div>
       </div>
       <div class="ph has-img">
-        <div class="ph-veil"><img src="assets/img/rf-2.webp" alt="" aria-hidden="true" width="1000" height="1250"></div>
-        <div class="ph-img">
-          <img src="assets/img/rf-2.webp" alt="Схема RF-лифтинга: поле между электродами прогревает дерму и коллагеновые волокна" data-i-alt="rf.alt" width="1000" height="1250" loading="lazy" decoding="async">
+        <div class="ph-veil"><img src="assets/img/rf-3.webp" alt="" aria-hidden="true" width="800" height="1000"></div>
+        <div class="ph-img" id="rfLive">
+          <svg class="rf-svg" viewBox="0 0 1000 1250" preserveAspectRatio="xMidYMid slice" role="img" aria-labelledby="rf-svg-t" xmlns="http://www.w3.org/2000/svg"><title id="rf-svg-t" data-i="rf.alt">Схема RF-лифтинга: поле между электродами прогревает дерму и коллагеновые волокна</title>
+<defs>
+ <linearGradient id="rf-bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EEF7F5"/><stop offset="1" stop-color="#D5ECE7"/></linearGradient>
+ <linearGradient id="rf-derm" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F3D9CA"/><stop offset=".55" stop-color="#EBC6B1"/><stop offset="1" stop-color="#E2B89F"/></linearGradient>
+ <linearGradient id="rf-fat" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5E3B8"/><stop offset="1" stop-color="#EBD39A"/></linearGradient>
+ <radialGradient id="rf-heat" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#F2A27E" stop-opacity=".55"/><stop offset=".6" stop-color="#F2B08F" stop-opacity=".22"/><stop offset="1" stop-color="#F2B08F" stop-opacity="0"/></radialGradient>
+ <filter id="rf-tex" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".02 .05" numOctaves="4" seed="9"/><feColorMatrix values="0 0 0 0 .6  0 0 0 0 .36  0 0 0 0 .28  0 0 0 -1.7 1.1"/></filter>
+ <filter id="rf-soft"><feGaussianBlur stdDeviation="2.2"/></filter>
+ <clipPath id="rf-panel"><rect x="90" y="150" width="820" height="950" rx="34"/></clipPath>
+</defs>
+<rect width="1000" height="1250" fill="url(#rf-bg)"/>
+<g clip-path="url(#rf-panel)">
+ <rect x="90" y="150" width="820" height="950" fill="#F7FAF9"/>
+ <!-- эпидермис -->
+ <path d="M90 430 C 260 410, 400 445, 560 425 S 820 410, 910 428 V 480 H 90 Z" fill="#F6E4D8"/>
+ <!-- дерма -->
+ <path d="M90 470 C 260 452, 400 486, 560 466 S 820 452, 910 470 V 880 H 90 Z" fill="url(#rf-derm)"/>
+ <rect x="90" y="450" width="820" height="440" filter="url(#rf-tex)" opacity=".35"/>
+ <!-- подкожный слой: дольки -->
+ <rect x="90" y="870" width="820" height="230" fill="url(#rf-fat)"/>
+ <rect x="90" y="870" width="820" height="230" filter="url(#rf-tex)" opacity=".16"/>
+ <path d="M90 872 C 300 862, 600 884, 910 870" fill="none" stroke="#E0C47F" stroke-width="2" opacity=".7"/>
+ <!-- зона прогрева -->
+ <ellipse class="rf-heat" cx="500" cy="660" rx="330" ry="190" fill="url(#rf-heat)"/>
+ <!-- коллаген: тонкие волокна -->
+ <g class="rf-wave" fill="none" stroke="#C9A84E" stroke-width="2.4" stroke-linecap="round" opacity=".85">
+  <path d="M110 560 C 200 540, 260 585, 350 562 S 520 540, 610 566 S 790 548, 890 562"/>
+  <path d="M110 615 C 210 598, 280 640, 380 618 S 560 596, 650 622 S 820 604, 890 618"/>
+  <path d="M110 672 C 200 655, 300 694, 400 672 S 560 652, 660 678 S 820 660, 890 674"/>
+  <path d="M110 730 C 220 712, 300 752, 410 730 S 580 710, 680 736 S 830 716, 890 730"/>
+  <path d="M110 790 C 210 772, 310 812, 420 790 S 590 770, 690 796 S 830 776, 890 790"/>
+ </g>
+ <g class="rf-wave" fill="none" stroke="#fff" stroke-width="1.4" stroke-linecap="round" opacity=".55">
+  <path d="M110 588 C 230 572, 300 608, 420 590 S 640 572, 890 592"/>
+  <path d="M110 700 C 240 684, 320 720, 440 702 S 660 684, 890 704"/>
+  <path d="M110 760 C 240 744, 330 780, 450 762 S 660 744, 890 764"/>
+ </g>
+ <g class="rf-tight" fill="none" stroke="#C9A84E" stroke-width="2.6" stroke-linecap="round"><path d="M110 585 C 300 581, 700 589, 890 585"/><path d="M110 628 C 300 624, 700 632, 890 628"/><path d="M110 672 C 300 668, 700 676, 890 672"/><path d="M110 716 C 300 712, 700 720, 890 716"/><path d="M110 758 C 300 754, 700 762, 890 758"/></g>
+ <!-- поле RF между двумя электродами -->
+ <g class="rf-arc" fill="none" stroke="#3FC1B6" stroke-linecap="round">
+  <path d="M380 420 C 400 560, 600 560, 620 420" stroke-width="3" opacity=".95"/>
+  <path d="M380 420 C 390 640, 610 640, 620 420" stroke-width="2.6" opacity=".75"/>
+  <path d="M380 420 C 370 730, 630 730, 620 420" stroke-width="2.2" opacity=".55"/>
+  <path d="M380 420 C 340 820, 660 820, 620 420" stroke-width="1.8" opacity=".38"/>
+ </g>
+ <g fill="#3FC1B6" opacity=".9"><circle cx="500" cy="525" r="5"/><circle cx="500" cy="583" r="4.5"/><circle cx="500" cy="650" r="4"/><circle cx="500" cy="718" r="3.5"/></g>
+</g>
+<rect x="90" y="150" width="820" height="950" rx="34" fill="none" stroke="#0F2A26" stroke-opacity=".1" stroke-width="2"/>
+<!-- насадка аппарата -->
+<g>
+ <rect x="330" y="232" width="340" height="170" rx="46" fill="#0E2422"/>
+ <rect x="350" y="252" width="300" height="130" rx="34" fill="#1F3B38"/>
+ <rect x="360" y="388" width="40" height="34" rx="10" fill="#E8D394"/>
+ <rect x="600" y="388" width="40" height="34" rx="10" fill="#E8D394"/>
+ <circle cx="500" cy="317" r="22" fill="none" stroke="#3FC1B6" stroke-width="3"/>
+ <circle cx="500" cy="317" r="8" fill="#3FC1B6"/>
+ <rect x="470" y="150" width="60" height="86" fill="#0E2422"/>
+</g>
+<g filter="url(#rf-soft)" opacity=".5"><rect x="360" y="420" width="40" height="8" rx="4" fill="#3FC1B6"/><rect x="600" y="420" width="40" height="8" rx="4" fill="#3FC1B6"/></g>
+</svg>
         </div>
         <svg class="ph-line" viewBox="0 0 100 100" aria-hidden="true"><path class="w" d=""/><path class="g" d=""/></svg>
       </div>
@@ -203,9 +262,9 @@
         </div>
       </div>
       <div class="ph has-img">
-        <div class="ph-veil"><img src="assets/img/pap-2.webp" alt="" aria-hidden="true" width="800" height="1000"></div>
+        <div class="ph-veil"><img src="assets/img/pap-3.webp" alt="" aria-hidden="true" width="800" height="1000"></div>
         <div class="ph-img">
-          <img src="assets/img/pap-2.webp" alt="Схема: папиллома на ножке и точечное удаление" data-i-alt="pap.alt" width="800" height="1000" loading="lazy" decoding="async">
+          <img src="assets/img/pap-3.webp" alt="Схема: папиллома на ножке и точечное удаление" data-i-alt="pap.alt" width="800" height="1000" loading="lazy" decoding="async">
         </div>
         <svg class="ph-line" viewBox="0 0 100 100" aria-hidden="true"><path class="w" d=""/><path class="g" d=""/></svg>
       </div>
@@ -233,7 +292,7 @@
       </div>
     </article>
     <article class="s4 rv" id="pigmentaciya" aria-labelledby="h-pig">
-      <figure class="s4-ph"><img src="assets/img/pig-3.webp" alt="Схема: скопления меланина в коже и световое воздействие" data-i-alt="pig.alt" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="s4-ph"><img src="assets/img/pig-4.webp" alt="Схема: скопления меланина в коже и световое воздействие" data-i-alt="pig.alt" width="800" height="1000" loading="lazy" decoding="async"></figure>
       <div class="s4-txt">
     <h2 class="disp" id="h-pig" data-i="pig.h2">Веснушки, лентиго, мелазма, хлоазма</h2>
     <p class="lead" data-i="pig.lead">Курс подбирается под тип пигментации и фототип кожи. Сначала диагностика, потом план: количество процедур, уход и защита от солнца.</p>
@@ -248,7 +307,7 @@
       </div>
     </article>
     <article class="s4 rv" id="morshchiny" aria-labelledby="h-mor">
-      <figure class="s4-ph"><img src="assets/img/mor-2.webp" alt="Схема: нити-каркас в дерме при армировании" data-i-alt="mor.alt" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="s4-ph"><img src="assets/img/mor-3.webp" alt="Схема: нити-каркас в дерме при армировании" data-i-alt="mor.alt" width="800" height="1000" loading="lazy" decoding="async"></figure>
       <div class="s4-txt">
     <h2 class="disp" id="h-mor" data-i="mor.h2">Армирование лица: каркас для кожи без операции</h2>
     <p class="lead" data-i="mor.lead">Для тех, кто хочет подтянуть овал и разгладить морщины без хирургии. Врач оценивает состояние кожи и предлагает схему под ваш возраст и задачу.</p>
@@ -263,7 +322,7 @@
       </div>
     </article>
     <article class="s4 rv" id="akne" aria-labelledby="h-akn">
-      <figure class="s4-ph"><img src="assets/img/akne-2.webp" alt="Схема: забитая пора с воспалением и чистая пора после курса лечения" data-i-alt="akn.alt" width="800" height="1000" loading="lazy" decoding="async"></figure>
+      <figure class="s4-ph"><img src="assets/img/akne-3.webp" alt="Схема: забитая пора с воспалением и чистая пора после курса лечения" data-i-alt="akn.alt" width="800" height="1000" loading="lazy" decoding="async"></figure>
       <div class="s4-txt">
     <h2 class="disp" id="h-akn" data-i="akn.h2">Акне: лечение по плану, а не по одной процедуре</h2>
     <p class="lead" data-i="akn.lead">Угревая сыпь лечится курсом: осмотр, подбор терапии и домашнего ухода, контрольные приёмы. Врач ведёт пациента до конца курса, а не до первого улучшения.</p>
@@ -563,6 +622,6 @@
   <a href="https://www.instagram.com/dr_gulmira_cosmetolog_/" target="_blank" rel="noopener" aria-label="Instagram" style="border-left:1px solid rgba(255,255,255,.14)"><svg aria-hidden="true"><use href="#ic-ig"/></svg></a>
 </nav>
 
-<script src="script.js?v=20261029-4" defer></script>
+<script src="script.js?v=20261029-5" defer></script>
 </body>
 </html>
