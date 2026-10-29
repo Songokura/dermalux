@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300&family=Onest:wght@400;500;600&display=swap">
 <link rel="preload" as="image" href="assets/img/hero-2.webp" media="(min-width:761px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-m-2.webp" media="(max-width:760px)" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261029-11">
+<link rel="stylesheet" href="styles.css?v=20261029-12">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -222,7 +222,7 @@
     <div class="svc">
       <div class="txt">
         <h2 class="disp" id="h-lz" data-i="lz.h2">Диодный лазер: эпиляция с охлаждением, без боли</h2>
-        <p class="lead" data-i="lz.lead">Лазерная эпиляция всего тела. В ролике - кожа после бритья и после курса лазера в нашей клинике.</p>
+        <p class="lead" data-i="lz.lead">Лазерная эпиляция всего тела. Слева - кожа после бритья, справа - после курса лазера в нашей клинике.</p>
         <ul class="dabs">
           <li data-i="lz.l1">Лицо, подмышки, бикини, руки, ноги</li>
           <li data-i="lz.l2">Кожа охлаждается во время процедуры</li>
@@ -233,13 +233,9 @@
           <a class="btn btn-gold" href="https://wa.me/77075254092" data-wa="lazer" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="lz.price">Цена лазерной эпиляции</span></a>
         </div>
       </div>
-      <div class="ph has-img">
-        <div class="ph-veil"><img src="assets/img/lazer-2.webp" alt="" aria-hidden="true" width="478" height="850"></div>
-        <div class="ph-img" data-loopbox>
-          <img src="assets/img/lazer-2.webp" alt="Ноги до и после курса лазерной эпиляции в клинике Dermalux" data-i-alt="lz.alt" width="478" height="850" loading="lazy" decoding="async">
-          <video muted playsinline loop preload="none" data-loop="assets/video/lazer-loop.mp4" aria-hidden="true"></video>
-        </div>
-        <svg class="ph-line" viewBox="0 0 100 100" aria-hidden="true"><path class="w" d=""/><path class="g" d=""/></svg>
+      <div class="ba lz-ba">
+        <figure class="ba-i"><img src="assets/img/lazer-do.webp" alt="Нога до лазерной эпиляции: после бритья видны точки волос и раздражение" data-i-alt="lz.alt" width="478" height="670" loading="lazy" decoding="async"><span class="rb-tag" data-i="rb.before">До</span></figure>
+        <figure class="ba-i"><img src="assets/img/lazer-posle.webp" alt="Нога после курса лазерной эпиляции в клинике Dermalux: гладкая кожа" data-i-alt="lz.alt2" width="478" height="670" loading="lazy" decoding="async"><span class="rb-tag" data-i="rb.after">После</span></figure>
       </div>
     </div>
   </section>
@@ -342,6 +338,13 @@
         <figcaption id="rb-akne" data-i="rb.c2">Акне: до и после курса</figcaption>
       </figure>
       <figure class="rb">
+        <div class="rb-vid" data-src="assets/video/raboty/lazer.mp4">
+          <img src="assets/img/raboty/lazer.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
+          <button class="rb-play" type="button" aria-describedby="rb-lazer"><span class="aw-ic" aria-hidden="true"></span><span data-i="rb.play">Смотреть</span></button>
+        </div>
+        <figcaption id="rb-lazer" data-i="rb.c10">Лазерная эпиляция: до и после курса</figcaption>
+      </figure>
+      <figure class="rb">
         <div class="rb-vid" data-src="assets/video/raboty/chistka.mp4">
           <img src="assets/img/raboty/chistka.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
           <button class="rb-play" type="button" aria-describedby="rb-chistka"><span class="aw-ic" aria-hidden="true"></span><span data-i="rb.play">Смотреть</span></button>
@@ -371,13 +374,6 @@
       </figure>
       <figure class="rb">
         <div class="rb-pic sens" data-sens="photo">
-          <img src="assets/img/raboty/guby.webp" alt="Образование на нижней губе: до удаления и после" data-i-alt="rb.a8" width="540" height="960" loading="lazy" decoding="async">
-          <span class="rb-tag" data-i="rb.before">До</span><span class="rb-tag rb-tag-b" data-i="rb.after">После</span>
-        </div>
-        <figcaption data-i="rb.c8">Образование на губе: до и после удаления</figcaption>
-      </figure>
-      <figure class="rb">
-        <div class="rb-pic sens" data-sens="photo">
           <img src="assets/img/raboty/keloid.webp" alt="Келоидные рубцы уха: до и после лечения" data-i-alt="rb.a9" width="540" height="960" loading="lazy" decoding="async">
         </div>
         <figcaption data-i="rb.c9">Келоидные рубцы уха: до и после</figcaption>
@@ -390,6 +386,13 @@
         <figcaption id="rb-uhod" data-i="rb.c6">Уходовые процедуры для лица</figcaption>
       </figure>
     </div>
+    <figure class="ba-wide rv">
+      <div class="ba sens" data-sens="photo">
+        <div class="ba-i"><img src="assets/img/guby-do.webp" alt="Образование на нижней губе до удаления" data-i-alt="rb.a8" width="600" height="480" loading="lazy" decoding="async"><span class="rb-tag" data-i="rb.before">До</span></div>
+        <div class="ba-i"><img src="assets/img/guby-posle.webp" alt="Нижняя губа после удаления образования" data-i-alt="rb.a8b" width="600" height="480" loading="lazy" decoding="async"><span class="rb-tag" data-i="rb.after">После</span></div>
+      </div>
+      <figcaption data-i="rb.c8">Образование на губе: до и после удаления</figcaption>
+    </figure>
     <div class="rb-more">
       <a class="btn btn-ghost" href="https://www.instagram.com/dr_gulmira_cosmetolog_/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-ig"/></svg><span data-i="rb.ig">Больше работ в Instagram</span></a>
     </div>
@@ -678,6 +681,6 @@
   <a href="https://www.instagram.com/dr_gulmira_cosmetolog_/" target="_blank" rel="noopener" aria-label="Instagram" style="border-left:1px solid rgba(255,255,255,.14)"><svg aria-hidden="true"><use href="#ic-ig"/></svg></a>
 </nav>
 
-<script src="script.js?v=20261029-11" defer></script>
+<script src="script.js?v=20261029-12" defer></script>
 </body>
 </html>
