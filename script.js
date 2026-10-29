@@ -342,12 +342,25 @@
     });
   }
 
-  /* ---------- Схема RF: поле течёт, волокна подтягиваются, пока кадр на экране ---------- */
+  /* ---------- Схема RF: поле течёт, пока кадр на экране; волокна выпрямляются по прокрутке ---------- */
   var rfLive = doc.getElementById("rfLive");
-  if (rfLive && "IntersectionObserver" in W) {
-    new IntersectionObserver(function (es) {
-      es.forEach(function (x) { rfLive.classList.toggle("rf-on", x.isIntersecting); });
-    }, { threshold: 0.45 }).observe(rfLive);
+  if (rfLive) {
+    if (!REDUCED) {
+      var rfTick = false;
+      var rfSet = function () {
+        rfTick = false;
+        var r = rfLive.getBoundingClientRect(), vh = W.innerHeight;
+        var p = (vh - r.top) / (vh * 0.75);
+        rfLive.style.setProperty("--rfp", Math.max(0, Math.min(1, p)).toFixed(3));
+      };
+      W.addEventListener("scroll", function () { if (!rfTick) { rfTick = true; requestAnimationFrame(rfSet); } }, { passive: true });
+      rfSet();
+    }
+    if ("IntersectionObserver" in W) {
+      new IntersectionObserver(function (es) {
+        es.forEach(function (x) { rfLive.classList.toggle("rf-on", x.isIntersecting); });
+      }, { threshold: 0.3 }).observe(rfLive);
+    }
   }
 
   /* ---------- Немые петли (герой): играют, пока кадр на экране ---------- */
