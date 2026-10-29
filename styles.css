@@ -11,6 +11,8 @@
   --hdr:72px; --bar:64px; --r:18px; --rs:12px;
   --burger:1300px; /* порог бургера = порог оверлея меню: 1300px, по казахским подписям (9 пунктов) */
 }
+/* сайт только светлый: браузеру запрещено перекрашивать его в тёмный режим */
+:root{color-scheme:only light}
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
