@@ -13,6 +13,27 @@
   var TOUCH = W.matchMedia("(pointer:coarse)").matches;
   var VW = W.innerWidth, VH = W.innerHeight;
 
+  /* ---------- Медицинские кадры: размыты, первое нажатие только открывает ролик (раньше всех обработчиков) ---------- */
+  var EYE = '<svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" d="M2 12s3.6-6.5 10-6.5S22 12 22 12s-3.6 6.5-10 6.5S2 12 2 12z"/><circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>';
+  [].forEach.call(doc.querySelectorAll(".sens"), function (el) {
+    var o = doc.createElement("span");
+    o.className = "sens-ov"; o.setAttribute("role", "button"); o.tabIndex = 0;
+    o.innerHTML = EYE + '<b data-i="sens.t">Медицинское видео</b><small data-i="sens.s">Нажмите, чтобы посмотреть</small>';
+    el.appendChild(o);
+  });
+  W.addEventListener("click", function (e) {
+    var el = e.target.closest ? e.target.closest(".sens:not(.shown)") : null;
+    if (!el) return;
+    e.preventDefault(); e.stopImmediatePropagation();
+    el.classList.add("shown");
+  }, true);
+  doc.addEventListener("keydown", function (e) {
+    if ((e.key === "Enter" || e.key === " ") && e.target.classList && e.target.classList.contains("sens-ov")) {
+      e.preventDefault(); var el = e.target.closest(".sens"); el.classList.add("shown");
+      var b = el.querySelector("button"); if (b) b.focus();
+    }
+  });
+
   /* ---------- WhatsApp: один номер, текст по ключу карточки ---------- */
   var PHONE = "77075254092";
   var WA = {
