@@ -342,6 +342,21 @@
     });
   }
 
+  /* ---------- Врач: немая петля из клиники, пока блок в кадре ---------- */
+  var vrVid = doc.getElementById("vrVid");
+  if (vrVid && !REDUCED && "IntersectionObserver" in W) {
+    var vrV = vrVid.querySelector("video");
+    vrV.addEventListener("playing", function () { vrVid.classList.add("is-live"); });
+    new IntersectionObserver(function (es) {
+      es.forEach(function (x) {
+        if (x.isIntersecting) {
+          if (!vrV.getAttribute("src")) vrV.src = vrV.getAttribute("data-loop");
+          var pr = vrV.play(); if (pr && pr.catch) pr.catch(function () {});
+        } else vrV.pause();
+      });
+    }, { threshold: 0.4 }).observe(vrVid);
+  }
+
   /* ---------- Ролик награды: немая петля в кадре, полный ролик со звуком по кнопке ---------- */
   var awVid = doc.getElementById("awVid");
   if (awVid) {
