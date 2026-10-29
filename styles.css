@@ -584,3 +584,14 @@ body.menu-open .hdr{z-index:70}
 .sens-ov small{font-size:12px;line-height:1.3;opacity:.92;max-width:26ch}
 .sens-ov:focus-visible{outline:2px solid #fff;outline-offset:-6px}
 .sens.shown .sens-ov,.sens:not(.shown) .rb-play{display:none}
+
+/* ---------- 29.10.2026: ролик лазера, фото до/после в ленте работ ---------- */
+.svc .ph video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .6s}
+.svc .ph-img.is-live video{opacity:1}
+#lazer .svc .ph{aspect-ratio:9/16;height:auto;width:min(100%,340px);justify-self:center;margin-inline:auto}
+.rb-pic{position:relative;aspect-ratio:9/16;border-radius:var(--r);overflow:hidden;background:var(--ink)}
+.rb-pic>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.rb-tag{position:absolute;left:12px;top:12px;z-index:2;padding:5px 10px;border-radius:999px;background:rgba(14,36,34,.72);color:#fff;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase}
+.rb-tag-b{top:calc(50% + 12px)}
+.sens:not(.shown) .rb-tag{display:none}
+@media (max-width:760px){#lazer .svc .ph{width:min(100% - 32px,290px);margin-top:20px;border-radius:var(--r)}}

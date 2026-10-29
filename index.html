@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300&family=Onest:wght@400;500;600&display=swap">
 <link rel="preload" as="image" href="assets/img/hero-2.webp" media="(min-width:761px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-m-2.webp" media="(max-width:760px)" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261029-10">
+<link rel="stylesheet" href="styles.css?v=20261029-11">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -222,7 +222,7 @@
     <div class="svc">
       <div class="txt">
         <h2 class="disp" id="h-lz" data-i="lz.h2">Диодный лазер: эпиляция с охлаждением, без боли</h2>
-        <p class="lead" data-i="lz.lead">Лазерная эпиляция всего тела. Луч разрушает луковицу волоса, а охлаждённое окно насадки защищает кожу при каждой вспышке.</p>
+        <p class="lead" data-i="lz.lead">Лазерная эпиляция всего тела. В ролике - кожа после бритья и после курса лазера в нашей клинике.</p>
         <ul class="dabs">
           <li data-i="lz.l1">Лицо, подмышки, бикини, руки, ноги</li>
           <li data-i="lz.l2">Кожа охлаждается во время процедуры</li>
@@ -234,9 +234,10 @@
         </div>
       </div>
       <div class="ph has-img">
-        <div class="ph-veil"><img src="assets/img/lazer.webp" alt="" aria-hidden="true" width="800" height="1000"></div>
-        <div class="ph-img">
-          <img src="assets/img/lazer.webp" alt="Схема диодной эпиляции: луч разрушает луковицы волос, охлаждённое окно насадки защищает кожу" data-i-alt="lz.alt" width="800" height="1000" loading="lazy" decoding="async">
+        <div class="ph-veil"><img src="assets/img/lazer-2.webp" alt="" aria-hidden="true" width="478" height="850"></div>
+        <div class="ph-img" data-loopbox>
+          <img src="assets/img/lazer-2.webp" alt="Ноги до и после курса лазерной эпиляции в клинике Dermalux" data-i-alt="lz.alt" width="478" height="850" loading="lazy" decoding="async">
+          <video muted playsinline loop preload="none" data-loop="assets/video/lazer-loop.mp4" aria-hidden="true"></video>
         </div>
         <svg class="ph-line" viewBox="0 0 100 100" aria-hidden="true"><path class="w" d=""/><path class="g" d=""/></svg>
       </div>
@@ -318,7 +319,7 @@
     <div class="rb-head rv">
       <div>
         <h2 class="disp" id="h-rb" data-i="rb.h2">Мои работы</h2>
-        <p class="lead" data-i="rb.lead">Ролики из практики: до и после, процедуры и результат. Нажмите, чтобы посмотреть со звуком.</p>
+        <p class="lead" data-i="rb.lead">Ролики и фото из практики: до и после, процедуры и результат.</p>
       </div>
       <div class="rb-nav">
         <button class="rb-btn" type="button" data-dir="-1" aria-label="Предыдущий ролик" data-i-aria="rb.prev"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
@@ -341,6 +342,13 @@
         <figcaption id="rb-akne" data-i="rb.c2">Акне: до и после курса</figcaption>
       </figure>
       <figure class="rb">
+        <div class="rb-vid" data-src="assets/video/raboty/chistka.mp4">
+          <img src="assets/img/raboty/chistka.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
+          <button class="rb-play" type="button" aria-describedby="rb-chistka"><span class="aw-ic" aria-hidden="true"></span><span data-i="rb.play">Смотреть</span></button>
+        </div>
+        <figcaption id="rb-chistka" data-i="rb.c7">Чистка лица: до и после</figcaption>
+      </figure>
+      <figure class="rb">
         <div class="rb-vid sens" data-src="assets/video/raboty/papillomatoz.mp4">
           <img src="assets/img/raboty/papillomatoz.webp" alt="" width="360" height="640" loading="lazy" decoding="async">
           <button class="rb-play" type="button" aria-describedby="rb-papillomatoz"><span class="aw-ic" aria-hidden="true"></span><span data-i="rb.play">Смотреть</span></button>
@@ -360,6 +368,19 @@
           <button class="rb-play" type="button" aria-describedby="rb-novoobrazovanie"><span class="aw-ic" aria-hidden="true"></span><span data-i="rb.play">Смотреть</span></button>
         </div>
         <figcaption id="rb-novoobrazovanie" data-i="rb.c5">Удаление новообразования: заживление</figcaption>
+      </figure>
+      <figure class="rb">
+        <div class="rb-pic sens" data-sens="photo">
+          <img src="assets/img/raboty/guby.webp" alt="Образование на нижней губе: до удаления и после" data-i-alt="rb.a8" width="540" height="960" loading="lazy" decoding="async">
+          <span class="rb-tag" data-i="rb.before">До</span><span class="rb-tag rb-tag-b" data-i="rb.after">После</span>
+        </div>
+        <figcaption data-i="rb.c8">Образование на губе: до и после удаления</figcaption>
+      </figure>
+      <figure class="rb">
+        <div class="rb-pic sens" data-sens="photo">
+          <img src="assets/img/raboty/keloid.webp" alt="Келоидные рубцы уха: до и после лечения" data-i-alt="rb.a9" width="540" height="960" loading="lazy" decoding="async">
+        </div>
+        <figcaption data-i="rb.c9">Келоидные рубцы уха: до и после</figcaption>
       </figure>
       <figure class="rb">
         <div class="rb-vid" data-src="assets/video/raboty/uhod.mp4">
@@ -657,6 +678,6 @@
   <a href="https://www.instagram.com/dr_gulmira_cosmetolog_/" target="_blank" rel="noopener" aria-label="Instagram" style="border-left:1px solid rgba(255,255,255,.14)"><svg aria-hidden="true"><use href="#ic-ig"/></svg></a>
 </nav>
 
-<script src="script.js?v=20261029-10" defer></script>
+<script src="script.js?v=20261029-11" defer></script>
 </body>
 </html>

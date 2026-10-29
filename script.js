@@ -18,7 +18,7 @@
   [].forEach.call(doc.querySelectorAll(".sens"), function (el) {
     var o = doc.createElement("span");
     o.className = "sens-ov"; o.setAttribute("role", "button"); o.tabIndex = 0;
-    o.innerHTML = EYE + '<b data-i="sens.t">Медицинское видео</b><small data-i="sens.s">Нажмите, чтобы посмотреть</small>';
+    o.innerHTML = EYE + (el.getAttribute("data-sens") === "photo" ? '<b data-i="sens.tp">Медицинское фото</b>' : '<b data-i="sens.t">Медицинское видео</b>') + '<small data-i="sens.s">Нажмите, чтобы посмотреть</small>';
     el.appendChild(o);
   });
   W.addEventListener("click", function (e) {
