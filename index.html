@@ -29,7 +29,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;1,300&family=Onest:wght@400;500;600&display=swap">
 <link rel="preload" as="image" href="assets/img/hero-2.webp" media="(min-width:761px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/img/hero-m-2.webp" media="(max-width:760px)" fetchpriority="high">
-<link rel="stylesheet" href="styles.css?v=20261029-12">
+<link rel="stylesheet" href="styles.css?v=20261029-13">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -91,8 +91,8 @@
       <a href="#pigmentaciya" data-i="nav.pigmentaciya">Пигментация</a>
       <a href="#morshchiny" data-i="nav.morshchiny">Морщины</a>
       <a href="#akne" data-i="nav.akne">Акне</a>
-      <a href="#uslugi" data-i="nav.uslugi">Все услуги</a>
       <a href="#vrach" data-i="nav.vrach">Врач</a>
+      <a href="#uslugi" data-i="nav.uslugi">Все услуги</a>
       <a href="#kontakty" data-i="nav.kontakty">Контакты</a>
     </nav>
     <div class="hdr-right">
@@ -116,9 +116,9 @@
     <li><a href="#pigmentaciya" data-i="m.pigmentaciya">Пигментация и веснушки</a></li>
     <li><a href="#morshchiny" data-i="m.morshchiny">Армирование лица</a></li>
     <li><a href="#akne" data-i="m.akne">Лечение акне</a></li>
-    <li><a href="#uslugi" data-i="m.uslugi">Все услуги и цены</a></li>
-    <li><a href="#raboty" data-i="m.raboty">Мои работы</a></li>
     <li><a href="#vrach" data-i="m.vrach">Врач</a></li>
+    <li><a href="#raboty" data-i="m.raboty">Мои работы</a></li>
+    <li><a href="#uslugi" data-i="m.uslugi">Все услуги и цены</a></li>
     <li><a href="#voprosy" data-i="m.voprosy">Вопросы</a></li>
     <li><a href="#kontakty" data-i="m.kontakty">Контакты</a></li>
   </ul>
@@ -189,7 +189,7 @@
   </section>
 </div>
 
-<!-- Плита 2: папилломы (фото справа, тёмная) -->
+<!-- Плита 2: папилломы (до/после справа, тёмная) -->
 <div class="pw dark" id="papillomy">
   <section class="plate" aria-labelledby="h-pap">
     <div class="svc">
@@ -205,18 +205,18 @@
           <a class="btn btn-gold" href="https://wa.me/77075254092" data-wa="papillomy" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="pap.price">Цена удаления папиллом</span></a>
         </div>
       </div>
-      <div class="ph has-img">
-        <div class="ph-veil"><img src="assets/img/pap-3.webp" alt="" aria-hidden="true" width="800" height="1000"></div>
-        <div class="ph-img">
-          <img src="assets/img/pap-3.webp" alt="Схема: папиллома на ножке и точечное удаление" data-i-alt="pap.alt" width="800" height="1000" loading="lazy" decoding="async">
+      <figure class="pap-ba">
+        <div class="ba">
+          <div class="ba-i"><img src="assets/img/guby-do.webp" alt="Образование на нижней губе до удаления" data-i-alt="rb.a8" width="480" height="600" loading="lazy" decoding="async"><span class="rb-tag" data-i="rb.before">До</span></div>
+          <div class="ba-i"><img src="assets/img/guby-posle.webp" alt="Нижняя губа после удаления образования" data-i-alt="rb.a8b" width="480" height="600" loading="lazy" decoding="async"><span class="rb-tag" data-i="rb.after">После</span></div>
         </div>
-        <svg class="ph-line" viewBox="0 0 100 100" aria-hidden="true"><path class="w" d=""/><path class="g" d=""/></svg>
-      </div>
+        <figcaption data-i="rb.c8">Образование на губе: до и после удаления</figcaption>
+      </figure>
     </div>
   </section>
 </div>
 
-<!-- Плита 3: диодный лазер (фото слева) -->
+<!-- Плита 3: диодный лазер (до/после слева) -->
 <div class="pw light r" id="lazer">
   <section class="plate" aria-labelledby="h-lz">
     <div class="svc">
@@ -309,6 +309,35 @@
   </div>
 </section>
 
+<!-- Врач -->
+<section class="sec mist smear" id="vrach" aria-labelledby="h-vr">
+  <div class="wrap doc rv">
+    <div class="ph r has-img">
+      <div class="ph-veil"><img src="assets/img/vrach-4.webp" alt="" aria-hidden="true" width="478" height="850"></div>
+      <div class="ph-img" data-loopbox>
+        <img src="assets/img/vrach-4.webp" alt="Врач-дерматокосметолог Гульмира в кабинете клиники Dermalux" data-i-alt="vr.alt" width="478" height="850" loading="lazy" decoding="async">
+        <video muted playsinline loop preload="none" data-loop="assets/video/vrach-loop.mp4" aria-hidden="true"></video>
+      </div>
+      <svg class="ph-line" viewBox="0 0 100 100" aria-hidden="true"><path class="w" d=""/><path class="g" d=""/></svg>
+    </div>
+    <div>
+      <p class="kick" data-i="vr.kick">Врач</p>
+      <h2 class="disp" id="h-vr" data-i="vr.h2">Гульмира</h2>
+      <p class="doc-role" data-i="vr.role">Врач-дерматокосметолог, основатель клиники Dermalux. 16 лет практики в дерматологии и косметологии.</p>
+      <q data-i="vr.q">Довожу начатое лечение до конца и сопровождаю пациента на всех этапах. Честность, прозрачность и никаких ложных обещаний.</q>
+      <ul class="dabs">
+        <li data-i="vr.l1">План лечения после осмотра, а не по прайсу</li>
+        <li data-i="vr.l2">Дерматоскоп, RF-аппарат и лазер - в своём кабинете</li>
+        <li data-i="vr.l3">Минимальный период реабилитации там, где это возможно</li>
+      </ul>
+      <div class="cta">
+        <a class="btn btn-gold" href="https://wa.me/77075254092" data-wa="vrach" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="vr.b1">Задать вопрос врачу</span></a>
+        <a class="btn btn-ghost" href="https://www.instagram.com/dr_gulmira_cosmetolog_/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-ig"/></svg><span data-i="vr.b2">Больше работ в Instagram</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Мои работы: лента роликов -->
 <section class="sec" id="raboty" aria-labelledby="h-rb">
   <div class="wrap">
@@ -386,44 +415,8 @@
         <figcaption id="rb-uhod" data-i="rb.c6">Уходовые процедуры для лица</figcaption>
       </figure>
     </div>
-    <figure class="ba-wide rv">
-      <div class="ba sens" data-sens="photo">
-        <div class="ba-i"><img src="assets/img/guby-do.webp" alt="Образование на нижней губе до удаления" data-i-alt="rb.a8" width="600" height="480" loading="lazy" decoding="async"><span class="rb-tag" data-i="rb.before">До</span></div>
-        <div class="ba-i"><img src="assets/img/guby-posle.webp" alt="Нижняя губа после удаления образования" data-i-alt="rb.a8b" width="600" height="480" loading="lazy" decoding="async"><span class="rb-tag" data-i="rb.after">После</span></div>
-      </div>
-      <figcaption data-i="rb.c8">Образование на губе: до и после удаления</figcaption>
-    </figure>
     <div class="rb-more">
       <a class="btn btn-ghost" href="https://www.instagram.com/dr_gulmira_cosmetolog_/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-ig"/></svg><span data-i="rb.ig">Больше работ в Instagram</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- Врач -->
-<section class="sec mist smear" id="vrach" aria-labelledby="h-vr">
-  <div class="wrap doc rv">
-    <div class="ph r has-img">
-      <div class="ph-veil"><img src="assets/img/vrach-4.webp" alt="" aria-hidden="true" width="478" height="850"></div>
-      <div class="ph-img" data-loopbox>
-        <img src="assets/img/vrach-4.webp" alt="Врач-дерматокосметолог Гульмира в кабинете клиники Dermalux" data-i-alt="vr.alt" width="478" height="850" loading="lazy" decoding="async">
-        <video muted playsinline loop preload="none" data-loop="assets/video/vrach-loop.mp4" aria-hidden="true"></video>
-      </div>
-      <svg class="ph-line" viewBox="0 0 100 100" aria-hidden="true"><path class="w" d=""/><path class="g" d=""/></svg>
-    </div>
-    <div>
-      <p class="kick" data-i="vr.kick">Врач</p>
-      <h2 class="disp" id="h-vr" data-i="vr.h2">Гульмира</h2>
-      <p class="doc-role" data-i="vr.role">Врач-дерматокосметолог, основатель клиники Dermalux. 16 лет практики в дерматологии и косметологии.</p>
-      <q data-i="vr.q">Довожу начатое лечение до конца и сопровождаю пациента на всех этапах. Честность, прозрачность и никаких ложных обещаний.</q>
-      <ul class="dabs">
-        <li data-i="vr.l1">План лечения после осмотра, а не по прайсу</li>
-        <li data-i="vr.l2">Дерматоскоп, RF-аппарат и лазер - в своём кабинете</li>
-        <li data-i="vr.l3">Минимальный период реабилитации там, где это возможно</li>
-      </ul>
-      <div class="cta">
-        <a class="btn btn-gold" href="https://wa.me/77075254092" data-wa="vrach" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="vr.b1">Задать вопрос врачу</span></a>
-        <a class="btn btn-ghost" href="https://www.instagram.com/dr_gulmira_cosmetolog_/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-ig"/></svg><span data-i="vr.b2">Больше работ в Instagram</span></a>
-      </div>
     </div>
   </div>
 </section>
@@ -465,6 +458,35 @@
         <a class="btn btn-gold" href="https://wa.me/77075254092" data-wa="otzyvy" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="ot.b1">Записаться на консультацию</span></a>
         <a class="btn btn-ghost" href="https://www.instagram.com/dr_gulmira_cosmetolog_/" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-ig"/></svg><span data-i="ot.b2">Истории пациентов в Instagram</span></a>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Почему -->
+<section class="sec dark smear" id="pochemu" aria-labelledby="h-po">
+  <div class="wrap">
+    <div class="head rv">
+      <h2 class="disp" id="h-po" data-i="po.h2">Принимаю пациентов из Шымкента, Туркестана, Аксукента и Карабулака</h2>
+      <p class="lead" data-i="po.lead">А также из Ленгера, Сарыагаша, Казыгурта, Ордабасы и других населённых пунктов Туркестанской области.</p>
+    </div>
+    <div class="spec rv">
+      <p class="spec-l" data-i="po.spec">Специализация</p>
+      <ul class="dabs">
+        <li data-i="po.s1">Лечение акне, розацеа и других заболеваний кожи</li>
+        <li data-i="po.s2">Лечение мелазмы и гиперпигментации</li>
+        <li data-i="po.s3">Диагностика кожных новообразований</li>
+        <li data-i="po.s4">Удаление папиллом и других новообразований по показаниям</li>
+        <li data-i="po.s5">RF-лифтинг и армирование лица без операции</li>
+      </ul>
+      <a class="btn btn-gold" href="https://wa.me/77075254092" data-wa="pochemu" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="po.b">Записаться на консультацию в WhatsApp</span></a>
+    </div>
+    <div class="bento rv">
+      <div class="cell big"><div class="v">16 <small data-i="po.c1v">лет</small></div><p class="k" data-i="po.c1">практики в дерматологии и косметологии у врача-основателя клиники</p></div>
+      <div class="cell"><p class="k"><b data-i="po.c2b">Ежедневно <span class="num">9:00-18:00</span></b><br><span data-i="po.c2">без выходных, приём по записи</span></p></div>
+      <div class="cell"><p class="k"><b data-i="po.c3b">Дерматоскопия</b><br><span data-i="po.c3">перед удалением любого образования</span></p></div>
+      <div class="cell"><p class="k"><b data-i="po.c4b">План на весь курс</b><br><span data-i="po.c4">и сопровождение до конца лечения</span></p></div>
+      <div class="cell"><p class="k"><b data-i="po.c5b">Рассрочка</b><br><span data-i="po.c5">а также наличные и перевод</span></p></div>
+      <div class="cell wide"><p class="k"><b data-i="po.c6b">Врач говорит, что нужно, а что нет.</b> <span data-i="po.c6">Без лишних процедур и обещаний, которые медицина не может дать.</span></p></div>
     </div>
   </div>
 </section>
@@ -515,50 +537,6 @@
   </div>
 </section>
 
-<!-- Почему -->
-<section class="sec dark smear" id="pochemu" aria-labelledby="h-po">
-  <div class="wrap">
-    <div class="head rv">
-      <h2 class="disp" id="h-po" data-i="po.h2">Принимаю пациентов из Шымкента, Туркестана, Аксукента и Карабулака</h2>
-      <p class="lead" data-i="po.lead">А также из Ленгера, Сарыагаша, Казыгурта, Ордабасы и других населённых пунктов Туркестанской области.</p>
-    </div>
-    <div class="spec rv">
-      <p class="spec-l" data-i="po.spec">Специализация</p>
-      <ul class="dabs">
-        <li data-i="po.s1">Лечение акне, розацеа и других заболеваний кожи</li>
-        <li data-i="po.s2">Лечение мелазмы и гиперпигментации</li>
-        <li data-i="po.s3">Диагностика кожных новообразований</li>
-        <li data-i="po.s4">Удаление папиллом и других новообразований по показаниям</li>
-        <li data-i="po.s5">RF-лифтинг и армирование лица без операции</li>
-      </ul>
-      <a class="btn btn-gold" href="https://wa.me/77075254092" data-wa="pochemu" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ic-wa"/></svg><span data-i="po.b">Записаться на консультацию в WhatsApp</span></a>
-    </div>
-    <div class="bento rv">
-      <div class="cell big"><div class="v">16 <small data-i="po.c1v">лет</small></div><p class="k" data-i="po.c1">практики в дерматологии и косметологии у врача-основателя клиники</p></div>
-      <div class="cell"><p class="k"><b data-i="po.c2b">Ежедневно <span class="num">9:00-18:00</span></b><br><span data-i="po.c2">без выходных, приём по записи</span></p></div>
-      <div class="cell"><p class="k"><b data-i="po.c3b">Дерматоскопия</b><br><span data-i="po.c3">перед удалением любого образования</span></p></div>
-      <div class="cell"><p class="k"><b data-i="po.c4b">План на весь курс</b><br><span data-i="po.c4">и сопровождение до конца лечения</span></p></div>
-      <div class="cell"><p class="k"><b data-i="po.c5b">Рассрочка</b><br><span data-i="po.c5">а также наличные и перевод</span></p></div>
-      <div class="cell wide"><p class="k"><b data-i="po.c6b">Врач говорит, что нужно, а что нет.</b> <span data-i="po.c6">Без лишних процедур и обещаний, которые медицина не может дать.</span></p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Как проходит -->
-<section class="sec" id="kak" aria-labelledby="h-kak">
-  <div class="wrap">
-    <div class="head rv">
-      <h2 class="disp" id="h-kak" data-i="kak.h2">От сообщения в WhatsApp до контрольного осмотра</h2>
-    </div>
-    <div class="steps rv">
-      <div class="step"><i>01</i><h3 data-i="kak.s1">Напишите в WhatsApp</h3><p data-i="kak.s1t">Менеджер Назмина отвечает ежедневно с 9:00 до 18:00 и подбирает время приёма.</p></div>
-      <div class="step"><i>02</i><h3 data-i="kak.s2">Осмотр и дерматоскопия</h3><p data-i="kak.s2t">Врач смотрит кожу и образования, задаёт вопросы, называет стоимость.</p></div>
-      <div class="step"><i>03</i><h3 data-i="kak.s3">Процедура или курс</h3><p data-i="kak.s3t">Удаление за один визит или план лечения с понятными этапами.</p></div>
-      <div class="step"><i>04</i><h3 data-i="kak.s4">Сопровождение</h3><p data-i="kak.s4t">Рекомендации по уходу и контрольный осмотр. Вопросы можно задать в WhatsApp.</p></div>
-    </div>
-  </div>
-</section>
-
 <!-- Клиника: фото-плита -->
 <div class="pw pw-kl dark" id="klinika">
   <section class="plate" aria-labelledby="h-kl">
@@ -581,6 +559,21 @@
     </div>
   </section>
 </div>
+
+<!-- Как проходит -->
+<section class="sec" id="kak" aria-labelledby="h-kak">
+  <div class="wrap">
+    <div class="head rv">
+      <h2 class="disp" id="h-kak" data-i="kak.h2">От сообщения в WhatsApp до контрольного осмотра</h2>
+    </div>
+    <div class="steps rv">
+      <div class="step"><i>01</i><h3 data-i="kak.s1">Напишите в WhatsApp</h3><p data-i="kak.s1t">Менеджер Назмина отвечает ежедневно с 9:00 до 18:00 и подбирает время приёма.</p></div>
+      <div class="step"><i>02</i><h3 data-i="kak.s2">Осмотр и дерматоскопия</h3><p data-i="kak.s2t">Врач смотрит кожу и образования, задаёт вопросы, называет стоимость.</p></div>
+      <div class="step"><i>03</i><h3 data-i="kak.s3">Процедура или курс</h3><p data-i="kak.s3t">Удаление за один визит или план лечения с понятными этапами.</p></div>
+      <div class="step"><i>04</i><h3 data-i="kak.s4">Сопровождение</h3><p data-i="kak.s4t">Рекомендации по уходу и контрольный осмотр. Вопросы можно задать в WhatsApp.</p></div>
+    </div>
+  </div>
+</section>
 
 <!-- Вопросы -->
 <section class="sec mist" id="voprosy" aria-labelledby="h-fq">
@@ -681,6 +674,6 @@
   <a href="https://www.instagram.com/dr_gulmira_cosmetolog_/" target="_blank" rel="noopener" aria-label="Instagram" style="border-left:1px solid rgba(255,255,255,.14)"><svg aria-hidden="true"><use href="#ic-ig"/></svg></a>
 </nav>
 
-<script src="script.js?v=20261029-12" defer></script>
+<script src="script.js?v=20261029-13" defer></script>
 </body>
 </html>

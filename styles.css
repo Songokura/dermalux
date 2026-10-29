@@ -600,7 +600,8 @@ body.menu-open .hdr{z-index:70}
 .sens:not(.shown) .ba-i{overflow:hidden}
 .lz-ba{align-self:center;justify-self:center;width:100%;max-width:520px}
 .pw.r .svc .lz-ba{order:-1}
-.ba-wide{margin:40px 0 0;max-width:820px}
-.ba-wide figcaption{margin-top:12px;font-size:14px;line-height:1.4;color:var(--mute)}
 @media (max-width:760px){.svc .lz-ba{order:-1;width:calc(100% - 32px);margin:20px auto 0}.ba .rb-tag{bottom:8px;left:8px}}
 .lz-ba .rb-tag{top:12px;bottom:auto}
+.pap-ba{margin:0;align-self:center;justify-self:center;width:100%;max-width:520px}
+.pap-ba figcaption{margin-top:12px;font-size:14px;line-height:1.4;color:var(--mute)}
+@media (max-width:760px){.svc .pap-ba{order:-1;width:calc(100% - 32px);margin:20px auto 0}}
